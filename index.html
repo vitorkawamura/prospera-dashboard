@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Prospera — Roadshow de Investidores</title>
+<style>
+  :root {
+    --navy:   #0f2540;
+    --navy2:  #1a3a5c;
+    --green:  #1db87e;
+    --green2: #17a06d;
+    --amber:  #e8a020;
+    --red:    #d94f4f;
+    --slate:  #8496ae;
+    --line:   #e4e9f0;
+    --bg:     #f0f3f7;
+    --card:   #ffffff;
+    --ink:    #1a2535;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg); color: var(--ink); -webkit-font-smoothing: antialiased; }
+
+  /* ── Header ── */
+  header {
+    background: var(--navy);
+    padding: 28px 0 0;
+    position: relative;
+    overflow: hidden;
+  }
+  header::before {
+    content: "";
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 80% 50%, rgba(29,184,126,.15) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .hdr-inner {
+    max-width: 1160px; margin: 0 auto; padding: 0 28px;
+    display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; flex-wrap: wrap;
+  }
+  .hdr-badge {
+    display: inline-block; font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+    font-weight: 700; color: var(--green); background: rgba(29,184,126,.12);
+    border: 1px solid rgba(29,184,126,.3); border-radius: 20px; padding: 3px 10px; margin-bottom: 10px;
+  }
+  .hdr-title { font-size: 28px; font-weight: 800; color: #fff; letter-spacing: -.3px; }
+  .hdr-sub   { font-size: 14px; color: #7fa8cc; margin-top: 4px; }
+  .hdr-meta  { text-align: right; color: #5a84aa; font-size: 12px; padding-top: 6px; }
+  .hdr-meta strong { color: #a8c8e8; }
+  .hdr-meta .dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%;
+    background: var(--green); margin-right: 5px; box-shadow: 0 0 0 3px rgba(29,184,126,.2); }
+
+  .progress-strip {
+    max-width: 1160px; margin: 22px auto 0; padding: 0 28px 0;
+    display: flex; align-items: center; gap: 0; overflow: hidden; border-radius: 6px 6px 0 0;
+  }
+  .ps-seg { flex: 1; height: 5px; }
+
+  /* ── Wrap ── */
+  .wrap { max-width: 1160px; margin: 0 auto; padding: 0 28px 56px; }
+
+  /* ── KPIs ── */
+  .kpis { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: -2px; }
+  .kpi {
+    background: var(--card); border-radius: 12px; padding: 18px 16px 15px;
+    border: 1px solid var(--line); box-shadow: 0 3px 14px rgba(15,37,64,.07);
+    position: relative; overflow: hidden;
+  }
+  .kpi::after {
+    content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    border-radius: 12px 12px 0 0;
+  }
+  .kpi.c-green::after  { background: var(--green); }
+  .kpi.c-navy::after   { background: var(--navy2); }
+  .kpi.c-amber::after  { background: var(--amber); }
+  .kpi.c-red::after    { background: var(--red); }
+  .kpi.c-slate::after  { background: var(--slate); }
+  .kpi .lbl { font-size: 10.5px; text-transform: uppercase; letter-spacing: .7px;
+    font-weight: 700; color: var(--slate); }
+  .kpi .val { font-size: 34px; font-weight: 800; color: var(--navy); margin-top: 8px; line-height: 1; }
+  .kpi .val small { font-size: 15px; font-weight: 600; color: var(--slate); }
+  .kpi .sub { font-size: 11.5px; color: var(--slate); margin-top: 5px; }
+
+  /* ── Section titles ── */
+  .sec { margin-top: 22px; }
+  .sec-title { font-size: 12px; text-transform: uppercase; letter-spacing: 1px;
+    font-weight: 700; color: var(--slate); margin-bottom: 12px; display: flex;
+    align-items: center; gap: 8px; }
+  .sec-title::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
+  /* ── Cards ── */
+  .card {
+    background: var(--card); border-radius: 12px;
+    border: 1px solid var(--line); box-shadow: 0 2px 10px rgba(15,37,64,.05);
+    padding: 20px 22px;
+  }
+  .card h3 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 3px; }
+  .card .desc { font-size: 12px; color: var(--slate); margin-bottom: 16px; }
+
+  .grid-2 { display: grid; grid-template-columns: 1.5fr 1fr; gap: 16px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+
+  /* ── Funnel bars ── */
+  .stage { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .s-num  { width: 22px; height: 22px; border-radius: 50%; background: var(--navy);
+    color: #fff; font-size: 10px; font-weight: 700; display: flex; align-items: center;
+    justify-content: center; flex-shrink: 0; }
+  .s-num.dim { background: #d0d8e4; color: #8496ae; }
+  .s-name { width: 210px; font-size: 12.5px; font-weight: 600; flex-shrink: 0; }
+  .s-name.dim { color: var(--slate); font-weight: 500; }
+  .s-track { flex: 1; background: #edf0f5; border-radius: 6px; height: 22px; overflow: hidden; }
+  .s-fill  { height: 100%; border-radius: 6px; display: flex; align-items: center;
+    padding-left: 10px; color: #fff; font-size: 11px; font-weight: 700; }
+  .s-pct { font-size: 11px; color: var(--slate); width: 36px; text-align: right; flex-shrink: 0; }
+  .s-count { width: 28px; text-align: right; font-size: 13px; font-weight: 700;
+    color: var(--navy); flex-shrink: 0; }
+  .s-count.zero { color: #c8d0db; }
+
+  /* ── Conversion mini ── */
+  .conv { display: flex; align-items: stretch; gap: 0; }
+  .conv-step {
+    flex: 1; text-align: center; padding: 14px 10px;
+    border-right: 1px dashed var(--line); position: relative;
+  }
+  .conv-step:last-child { border-right: none; }
+  .conv-n { font-size: 28px; font-weight: 800; color: var(--navy); }
+  .conv-lbl { font-size: 10.5px; text-transform: uppercase; letter-spacing: .5px;
+    color: var(--slate); font-weight: 600; margin-top: 3px; }
+  .conv-rate { font-size: 12px; font-weight: 700; color: var(--green); margin-top: 6px; }
+  .conv-rate.na { color: var(--slate); }
+  .arrow { color: var(--line); font-size: 18px; display: flex; align-items: center; padding: 0 2px; }
+
+  /* ── Donut ── */
+  .donut-row { display: flex; align-items: center; gap: 22px; }
+  .donut { width: 140px; height: 140px; border-radius: 50%; flex-shrink: 0; position: relative; }
+  .donut::after { content: ""; position: absolute; inset: 28px;
+    background: var(--card); border-radius: 50%; }
+  .donut-center { position: absolute; inset: 0; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; z-index: 2; }
+  .donut-center .dn { font-size: 26px; font-weight: 800; color: var(--navy); }
+  .donut-center .dt { font-size: 10px; color: var(--slate); text-transform: uppercase; }
+  .legend { flex: 1; }
+  .leg-item { display: flex; align-items: center; gap: 9px; font-size: 13px;
+    margin-bottom: 10px; }
+  .leg-dot { width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; }
+  .leg-n { margin-left: auto; font-weight: 700; color: var(--navy); font-size: 14px; }
+  .leg-pct { font-size: 11px; color: var(--slate); margin-left: 4px; }
+
+  /* ── Milestone row ── */
+  .milestones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px; }
+  .ms {
+    border-radius: 10px; padding: 14px 16px;
+    border: 1px solid var(--line);
+  }
+  .ms.active  { background: rgba(29,184,126,.06); border-color: rgba(29,184,126,.3); }
+  .ms.pending { background: rgba(232,160,32,.05);  border-color: rgba(232,160,32,.3); }
+  .ms.done    { background: rgba(29,184,126,.06); border-color: rgba(29,184,126,.3); }
+  .ms-icon { font-size: 18px; }
+  .ms-label { font-size: 11px; text-transform: uppercase; letter-spacing: .5px;
+    font-weight: 700; color: var(--slate); margin-top: 8px; }
+  .ms-val { font-size: 22px; font-weight: 800; color: var(--navy); margin-top: 2px; }
+  .ms-note { font-size: 11.5px; color: var(--slate); margin-top: 3px; }
+
+  /* ── Insights ── */
+  .insights li { list-style: none; padding: 12px 0 12px 30px; position: relative;
+    border-bottom: 1px dashed var(--line); font-size: 13.5px; line-height: 1.55; }
+  .insights li:last-child { border-bottom: none; }
+  .insights li::before { position: absolute; left: 0; top: 10px; font-size: 15px; }
+  .insights li.ok::before   { content: "✅"; }
+  .insights li.warn::before { content: "⚠️"; }
+  .insights li.info::before { content: "📊"; }
+  .insights li.next::before { content: "🎯"; }
+  .insights b { color: var(--navy); }
+
+  footer { margin-top: 28px; padding-top: 16px; border-top: 1px solid var(--line);
+    font-size: 11.5px; color: var(--slate); display: flex;
+    justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .footer-logo { font-weight: 700; color: var(--navy); letter-spacing: .5px; }
+
+  @media (max-width: 900px) {
+    .kpis        { grid-template-columns: repeat(2, 1fr); }
+    .grid-2      { grid-template-columns: 1fr; }
+    .grid-3      { grid-template-columns: 1fr 1fr; }
+    .milestones  { grid-template-columns: 1fr 1fr; }
+    .hdr-meta    { text-align: left; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="hdr-inner">
+    <div>
+      <div class="hdr-badge">Roadshow em andamento</div>
+      <div class="hdr-title">PROSPERA</div>
+      <div class="hdr-sub">Acompanhamento do Processo de Captação — Norder Capital</div>
+    </div>
+    <div class="hdr-meta">
+      <div><span class="dot"></span><strong>Dados ao vivo</strong> do Attio</div>
+      <div style="margin-top:4px">Atualizado em 22/05/2026</div>
+      <div style="margin-top:2px">134 investidores mapeados</div>
+    </div>
+  </div>
+  <!-- Stage progress strip -->
+  <div class="progress-strip">
+    <div class="ps-seg" style="background:#253e5c"></div>
+    <div class="ps-seg" style="background:#2e5070"></div>
+    <div class="ps-seg" style="background:#1db87e;flex:2"></div>
+    <div class="ps-seg" style="background:#17a06d;flex:.5"></div>
+    <div class="ps-seg" style="background:#e8a020;flex:.3"></div>
+    <div class="ps-seg" style="background:#d94f4f;flex:4"></div>
+    <div class="ps-seg" style="background:#8496ae;flex:1"></div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- KPIs -->
+  <div class="kpis">
+    <div class="kpi c-green">
+      <div class="lbl">Universo mapeado</div>
+      <div class="val">134</div>
+      <div class="sub">investidores identificados</div>
+    </div>
+    <div class="kpi c-navy">
+      <div class="lbl">Pipeline ativo</div>
+      <div class="val">44</div>
+      <div class="sub">em processo (32,8%)</div>
+    </div>
+    <div class="kpi c-green">
+      <div class="lbl">Análise avançada</div>
+      <div class="val">5</div>
+      <div class="sub">investidores em due diligence</div>
+    </div>
+    <div class="kpi c-amber">
+      <div class="lbl">Reuniões realizadas</div>
+      <div class="val">10</div>
+      <div class="sub">7,6% taxa de conversão</div>
+    </div>
+    <div class="kpi c-slate">
+      <div class="lbl">On hold</div>
+      <div class="val">16</div>
+      <div class="sub">aguardando retomada</div>
+    </div>
+  </div>
+
+  <!-- Funil + Status -->
+  <div class="sec">
+    <div class="sec-title">Pipeline por estágio</div>
+    <div class="grid-2">
+
+      <div class="card">
+        <h3>Funil do roadshow</h3>
+        <div class="desc">Distribuição dos 134 investidores por etapa do processo.</div>
+
+        <!-- Active stages -->
+        <div class="stage">
+          <div class="s-num dim">0</div>
+          <div class="s-name dim">Não Contactado</div>
+          <div class="s-track"><div class="s-fill" style="width:2.2%;background:#c8d0db"></div></div>
+          <div class="s-pct">2,2%</div><div class="s-count">3</div>
+        </div>
+        <div class="stage">
+          <div class="s-num">1</div>
+          <div class="s-name">Abordagem Realizada</div>
+          <div class="s-track"><div class="s-fill" style="width:100%;background:var(--navy2)">30 investidores</div></div>
+          <div class="s-pct">22,4%</div><div class="s-count">30</div>
+        </div>
+        <div class="stage">
+          <div class="s-num">2</div>
+          <div class="s-name">Análise Inicial</div>
+          <div class="s-track"><div class="s-fill" style="width:6.6%;background:var(--navy2)"></div></div>
+          <div class="s-pct">1,5%</div><div class="s-count">2</div>
+        </div>
+        <div class="stage">
+          <div class="s-num dim">3</div>
+          <div class="s-name dim">Agendamento Norder</div>
+          <div class="s-track"><div class="s-fill" style="width:1%;background:#c8d0db"></div></div>
+          <div class="s-pct">—</div><div class="s-count zero">0</div>
+        </div>
+        <div class="stage">
+          <div class="s-num">4</div>
+          <div class="s-name">Reunião c/ Norder</div>
+          <div class="s-track"><div class="s-fill" style="width:10%;background:var(--green)"></div></div>
+          <div class="s-pct">2,2%</div><div class="s-count">3</div>
+        </div>
+        <div class="stage">
+          <div class="s-num">5</div>
+          <div class="s-name">Agendamento c/ Prospera</div>
+          <div class="s-track"><div class="s-fill" style="width:3.3%;background:var(--green)">1</div></div>
+          <div class="s-pct">0,7%</div><div class="s-count">1</div>
+        </div>
+        <div class="stage">
+          <div class="s-num dim">6</div>
+          <div class="s-name dim">Reunião c/ Prospera</div>
+          <div class="s-track"><div class="s-fill" style="width:1%;background:#c8d0db"></div></div>
+          <div class="s-pct">—</div><div class="s-count zero">0</div>
+        </div>
+        <div class="stage">
+          <div class="s-num" style="background:var(--green)">7</div>
+          <div class="s-name" style="color:var(--green2);font-weight:700">Análise Avançada</div>
+          <div class="s-track"><div class="s-fill" style="width:16.6%;background:var(--green)">5</div></div>
+          <div class="s-pct">3,7%</div><div class="s-count" style="color:var(--green2)">5</div>
+        </div>
+
+        <div style="margin: 14px 0 10px; border-top:1px dashed var(--line); padding-top:12px;">
+          <div class="stage">
+            <div class="s-num" style="background:#8496ae">—</div>
+            <div class="s-name dim">On Hold</div>
+            <div class="s-track"><div class="s-fill" style="width:53.3%;background:#8496ae">16 investidores</div></div>
+            <div class="s-pct">11,9%</div><div class="s-count" style="color:#8496ae">16</div>
+          </div>
+          <div class="stage">
+            <div class="s-num" style="background:#d94f4f">✕</div>
+            <div class="s-name dim">Declinados (investidor)</div>
+            <div class="s-track"><div class="s-fill" style="width:100%;background:#d94f4f">73 investidores declinaram</div></div>
+            <div class="s-pct">54,5%</div><div class="s-count" style="color:#d94f4f">73</div>
+          </div>
+          <div class="stage">
+            <div class="s-num" style="background:#e0998c">✕</div>
+            <div class="s-name dim">Declinados (Norder)</div>
+            <div class="s-track"><div class="s-fill" style="width:3.3%;background:#e0998c"></div></div>
+            <div class="s-pct">0,7%</div><div class="s-count" style="color:#d94f4f">1</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Status donut + conversion -->
+      <div style="display:flex;flex-direction:column;gap:16px">
+
+        <div class="card">
+          <h3>Visão geral do universo</h3>
+          <div class="desc">Distribuição de todos os 134 investidores.</div>
+          <div class="donut-row">
+            <div class="donut" style="background: conic-gradient(
+                var(--green)  0 32.8%,
+                #d94f4f 32.8% 88.1%,
+                #8496ae 88.1% 100%);">
+              <div class="donut-center">
+                <div class="dn">134</div>
+                <div class="dt">total</div>
+              </div>
+            </div>
+            <div class="legend">
+              <div class="leg-item">
+                <span class="leg-dot" style="background:var(--green)"></span>
+                Pipeline ativo
+                <span class="leg-n">44</span><span class="leg-pct">32,8%</span>
+              </div>
+              <div class="leg-item">
+                <span class="leg-dot" style="background:#d94f4f"></span>
+                Declinados
+                <span class="leg-n">74</span><span class="leg-pct">55,2%</span>
+              </div>
+              <div class="leg-item">
+                <span class="leg-dot" style="background:#8496ae"></span>
+                On Hold
+                <span class="leg-n">16</span><span class="leg-pct">11,9%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Conversão do funil</h3>
+          <div class="desc">Taxa de avanço pelos estágios-chave.</div>
+          <div class="conv">
+            <div class="conv-step">
+              <div class="conv-n">134</div>
+              <div class="conv-lbl">Universo</div>
+              <div class="conv-rate na">—</div>
+            </div>
+            <div class="conv-step">
+              <div class="conv-n">44</div>
+              <div class="conv-lbl">Em processo</div>
+              <div class="conv-rate">32,8%</div>
+            </div>
+            <div class="conv-step">
+              <div class="conv-n">10</div>
+              <div class="conv-lbl">Com reunião</div>
+              <div class="conv-rate">22,7%</div>
+            </div>
+            <div class="conv-step">
+              <div class="conv-n">5</div>
+              <div class="conv-lbl">Análise Av.</div>
+              <div class="conv-rate">50,0%</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Milestones -->
+  <div class="sec">
+    <div class="sec-title">Marcos do processo</div>
+    <div class="milestones">
+      <div class="ms done">
+        <div class="ms-icon">📨</div>
+        <div class="ms-label">Abordagens enviadas</div>
+        <div class="ms-val">131</div>
+        <div class="ms-note">97,8% do universo contactado</div>
+      </div>
+      <div class="ms done">
+        <div class="ms-icon">🤝</div>
+        <div class="ms-label">Reuniões com Norder</div>
+        <div class="ms-val">10</div>
+        <div class="ms-note">investidores apresentados ao deal</div>
+      </div>
+      <div class="ms done">
+        <div class="ms-icon">❓</div>
+        <div class="ms-label">Q&A realizados</div>
+        <div class="ms-val">4</div>
+        <div class="ms-note">perguntas formais respondidas</div>
+      </div>
+      <div class="ms active">
+        <div class="ms-icon">🔬</div>
+        <div class="ms-label">Em análise avançada</div>
+        <div class="ms-val">5</div>
+        <div class="ms-note">due diligence em andamento</div>
+      </div>
+      <div class="ms pending">
+        <div class="ms-icon">📅</div>
+        <div class="ms-label">Agendado c/ Prospera</div>
+        <div class="ms-val">1</div>
+        <div class="ms-note">1ª reunião com o cliente marcada</div>
+      </div>
+      <div class="ms pending">
+        <div class="ms-icon">🏁</div>
+        <div class="ms-label">Aprovados</div>
+        <div class="ms-val">0</div>
+        <div class="ms-note">processo em curso</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Insights -->
+  <div class="sec">
+    <div class="sec-title">Análise e próximos passos</div>
+    <div class="card">
+      <ul class="insights">
+        <li class="ok"><b>5 investidores em análise avançada</b> — estágio mais crítico e promissor do processo. Esses fundos avançaram além das reuniões iniciais e estão conduzindo due diligence ativo.</li>
+        <li class="ok"><b>1 investidor já agendou reunião direta com a Prospera</b> (estágio 5) — marco relevante do roadshow, indicando interesse concreto em conhecer a empresa.</li>
+        <li class="info"><b>54,5% do universo declinaram</b> (73 de 134). Taxa esperada para um roadshow de captação. O foco agora é concentrar energia nos 5 em análise avançada e nos 16 em on hold que podem ser reativados.</li>
+        <li class="warn"><b>16 investidores em on hold</b> — oportunidade de reativação. Vale mapear os motivos de pausa e identificar quais têm potencial de retomada no curto prazo.</li>
+        <li class="next"><b>Próximo passo crítico:</b> converter os 5 de análise avançada para o estágio de reunião com a Prospera e, eventualmente, para aprovação.</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <div>Fonte: Attio · board PROSPERA · atualizado em 22/05/2026</div>
+    <div class="footer-logo">NORDER CAPITAL</div>
+  </footer>
+
+</div>
+</body>
+</html>
