@@ -4,6 +4,988 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Prospera — Roadshow de Investidores</title>
+
+<!-- DATA_START -->
+<script>
+const GENERATED_DATE = "25/05/2026";
+const INVESTORS = [
+  {
+    "company": "Alocc Gestao Patrimonial/TNA",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Treecorp",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Grupo Ultra (Família Igel)",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "M8 Partners",
+    "status": "4. REUNIÃO REALIZADA NORDER",
+    "active": "ATIVO",
+    "status_notes": "Atualmente, focados plenamente em opções de crédito (FIDCs)",
+    "lost_reason": ""
+  },
+  {
+    "company": "051/Allievo Capital",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Monte Azul MFO",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Nau Capital",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Carbisa",
+    "status": "0. NÃO CONTACTADO",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "TurimFO",
+    "status": "2. ANÁLISE INICIAL",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Helio Seibel (HS Investimentos)",
+    "status": "2. ANÁLISE INICIAL",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Valutia",
+    "status": "6. REUNIÃO REALIZADA COM O CLIENTE",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Família Brennand",
+    "status": "0. NÃO CONTACTADO",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Provence",
+    "status": "7. ANÁLISE AVANÇADA",
+    "active": "UPDATES",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "AUREN",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "WE Capital",
+    "status": "2. ANÁLISE INICIAL",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "ARC Capital/Reag",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Shift",
+    "status": "2. ANÁLISE INICIAL",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Vox Capital / Copel",
+    "status": "2. ANÁLISE INICIAL",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Charles River",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "MSW Capital",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "POSITIVE VENTURES",
+    "status": "2. ANÁLISE INICIAL",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Aguassanta Participações",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Grao",
+    "status": "2. ANÁLISE INICIAL",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Canary",
+    "status": "6. REUNIÃO REALIZADA COM O CLIENTE",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Yellow Ventures",
+    "status": "0. NÃO CONTACTADO",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "MONASHEES",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "ONEVC",
+    "status": "7. ANÁLISE AVANÇADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Felipe Noschese",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Valor Capital",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Coruja (Coruja Capital)",
+    "status": "3. AGENDAMENTO NORDER",
+    "active": "ON HOLD",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Globo Ventures",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Bewater",
+    "status": "7. ANÁLISE AVANÇADA",
+    "active": "UPDATES",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "GHT4",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Natura",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Portofino",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "IGAH VENTURES",
+    "status": "6. REUNIÃO REALIZADA COM O CLIENTE",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Vibra Energia",
+    "status": "2. ANÁLISE INICIAL",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Flavio Guimarães",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Bradesco CVC",
+    "status": "0. NÃO CONTACTADO",
+    "active": "DECLINADO NORDER",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Naman (Família Feffer)",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Grupo Malwee / BeWater",
+    "status": "7. ANÁLISE AVANÇADA",
+    "active": "UPDATES",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Maya Capital",
+    "status": "2. ANÁLISE INICIAL",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Silence VC",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Mira Capital",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Veneto Family Office",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "CARAVELA CAPITAL",
+    "status": "6. REUNIÃO REALIZADA COM O CLIENTE",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Octanova",
+    "status": "7. ANÁLISE AVANÇADA",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Votorantim Ventures",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Nicola Calicchio",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Upload Ventures",
+    "status": "6. REUNIÃO REALIZADA COM O CLIENTE",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Bold.t",
+    "status": "7. ANÁLISE AVANÇADA",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "KPX Family Office (Claudio Haddad)",
+    "status": "0. NÃO CONTACTADO",
+    "active": "ON HOLD",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "ALLVP / Hi Ventures",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Arbitral",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Confrapar",
+    "status": "2. ANÁLISE INICIAL",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Gaman Capital",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Polaris",
+    "status": "2. ANÁLISE INICIAL",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Pedro Camanho",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Sudlich",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Volpe Capital",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "VR Investimentos",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Douro Capital",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Blue Earth",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Daniela Zanetti – Darol (fam. Randall)",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Anima Investimentos",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Abernessia",
+    "status": "0. NÃO CONTACTADO",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Wright Capital",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Norte Ventures",
+    "status": "6. REUNIÃO REALIZADA COM O CLIENTE",
+    "active": "ON HOLD",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Enel",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "GK Partners",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "ON HOLD",
+    "status_notes": "Nao sei se ta certo",
+    "lost_reason": ""
+  },
+  {
+    "company": "Blue3/Troon",
+    "status": "6. REUNIÃO REALIZADA COM O CLIENTE",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Copec CVC",
+    "status": "2. ANÁLISE INICIAL",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Marathon Ventures",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Kaszek Ventures",
+    "status": "2. ANÁLISE INICIAL",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Lume Investimentos",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "G5 Partners",
+    "status": "6. REUNIÃO REALIZADA COM O CLIENTE",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "SHELL",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Fundo Pitanga",
+    "status": "4. REUNIÃO REALIZADA NORDER",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Angra",
+    "status": "5. AGENDAMENTO COM O CLIENTE",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Headline",
+    "status": "6. REUNIÃO REALIZADA COM O CLIENTE",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Rise Ventures",
+    "status": "6. REUNIÃO REALIZADA COM O CLIENTE",
+    "active": "ON HOLD",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "4UM Investimentos",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Aurum",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Centuria Investimentos",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Iporanga Ventures",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Azimut Wealth Management",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Holborn Assets",
+    "status": "6. REUNIÃO REALIZADA COM O CLIENTE",
+    "active": "ON HOLD",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Sea Fund",
+    "status": "6. REUNIÃO REALIZADA COM O CLIENTE",
+    "active": "ON HOLD",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Reach Capital",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "NEOENERGIA",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "CVC Suzano",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Albatroz Holding",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Investport",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "TERA Capital",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "CRESCERA INVESTIMENTOS VC",
+    "status": "4. REUNIÃO REALIZADA NORDER",
+    "active": "ON HOLD",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "AC Next",
+    "status": "7. ANÁLISE AVANÇADA",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Engie Brasil",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Javapar",
+    "status": "2. ANÁLISE INICIAL",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Order VC",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Gera Capital",
+    "status": "2. ANÁLISE INICIAL",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Dani Lorenzetti",
+    "status": "2. ANÁLISE INICIAL",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Blue3 Investimentos",
+    "status": "2. ANÁLISE INICIAL",
+    "active": "ON HOLD",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Pátria/Kamaroopin",
+    "status": "0. NÃO CONTACTADO",
+    "active": "DECLINADO NORDER",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "BS2 Asset",
+    "status": "4. REUNIÃO REALIZADA NORDER",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Big Bets",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Magma Partners",
+    "status": "2. ANÁLISE INICIAL",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "DGF INVESTIMENTOS",
+    "status": "6. REUNIÃO REALIZADA COM O CLIENTE",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Quartz",
+    "status": "2. ANÁLISE INICIAL",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Savia Ventures",
+    "status": "2. ANÁLISE INICIAL",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "BluStone",
+    "status": "6. REUNIÃO REALIZADA COM O CLIENTE",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Epitychia",
+    "status": "2. ANÁLISE INICIAL",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Vinci Partners",
+    "status": "2. ANÁLISE INICIAL",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Dalus Capital",
+    "status": "6. REUNIÃO REALIZADA COM O CLIENTE",
+    "active": "ON HOLD",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "ItauCVC/Kinea",
+    "status": "7. ANÁLISE AVANÇADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Calila",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Roberto Setúbal",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Klabin CVC",
+    "status": "2. ANÁLISE INICIAL",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Hypera",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Bossa Invest",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Solum",
+    "status": "2. ANÁLISE INICIAL",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "BWGI",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Sten Gestão Patrimonial",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "José Roberto Ermírio de Moraes",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Fondo de Fondos",
+    "status": "2. ANÁLISE INICIAL",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "JF Investimentos",
+    "status": "2. ANÁLISE INICIAL",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Ahead Ventures",
+    "status": "6. REUNIÃO REALIZADA COM O CLIENTE",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Natural Capital",
+    "status": "6. REUNIÃO REALIZADA COM O CLIENTE",
+    "active": "ON HOLD",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Alexia Ventures",
+    "status": "2. ANÁLISE INICIAL",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "CarpaFO",
+    "status": "6. REUNIÃO REALIZADA COM O CLIENTE",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "NXTP",
+    "status": "6. REUNIÃO REALIZADA COM O CLIENTE",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "1200 VC",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Mancora Ventures",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "BTG Pactual/Boost Lab - abordagem realizada",
+    "status": "2. ANÁLISE INICIAL",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "EDP Ventures",
+    "status": "4. REUNIÃO REALIZADA NORDER",
+    "active": "ATIVO",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Maraé Investimentos (mandato de VC está com a Pragma)",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Hi Partners",
+    "status": "2. ANÁLISE INICIAL",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Mandi Ventures",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "DECLINADO INVESTIDOR",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Jereissati",
+    "status": "6. REUNIÃO REALIZADA COM O CLIENTE",
+    "active": "ON HOLD",
+    "status_notes": "",
+    "lost_reason": ""
+  },
+  {
+    "company": "Oikos Wealth Management",
+    "status": "1. ABORDAGEM REALIZADA",
+    "active": "ON HOLD",
+    "status_notes": "",
+    "lost_reason": ""
+  }
+];
+</script>
+<!-- DATA_END -->
+
 <style>
   :root {
     --navy:   #0f2540;
@@ -22,10 +1004,10 @@
   body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     background: var(--bg); color: var(--ink); -webkit-font-smoothing: antialiased; }
 
-  /* ── Header ── */
+  /* ── HEADER ── */
   header {
     background: var(--navy);
-    padding: 28px 0 0;
+    padding: 22px 0 0;
     position: relative;
     overflow: hidden;
   }
@@ -37,31 +1019,38 @@
   }
   .hdr-inner {
     max-width: 1160px; margin: 0 auto; padding: 0 28px;
-    display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; flex-wrap: wrap;
+    display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap;
   }
-  .hdr-badge {
-    display: inline-block; font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
-    font-weight: 700; color: var(--green); background: rgba(29,184,126,.12);
-    border: 1px solid rgba(29,184,126,.3); border-radius: 20px; padding: 3px 10px; margin-bottom: 10px;
+  .hdr-left { display: flex; align-items: center; gap: 16px; }
+  .hdr-brand { font-size: 22px; font-weight: 900; color: #fff; letter-spacing: -.3px; }
+  .hdr-brand span { color: var(--green); }
+  .hdr-tagline { font-size: 13px; color: #7fa8cc; }
+  .hdr-right { display: flex; align-items: center; gap: 10px; }
+  .view-btn {
+    cursor: pointer; border: none; font-size: 13px; font-weight: 600;
+    padding: 7px 16px; border-radius: 20px; transition: background .15s, color .15s;
+    display: flex; align-items: center; gap: 6px;
   }
-  .hdr-title { font-size: 28px; font-weight: 800; color: #fff; letter-spacing: -.3px; }
-  .hdr-sub   { font-size: 14px; color: #7fa8cc; margin-top: 4px; }
-  .hdr-meta  { text-align: right; color: #5a84aa; font-size: 12px; padding-top: 6px; }
-  .hdr-meta strong { color: #a8c8e8; }
-  .hdr-meta .dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%;
-    background: var(--green); margin-right: 5px; box-shadow: 0 0 0 3px rgba(29,184,126,.2); }
+  .view-btn.active { background: #fff; color: var(--navy); }
+  .view-btn.inactive { background: transparent; color: rgba(255,255,255,.85);
+    border: 1.5px solid rgba(255,255,255,.35); }
+  .view-btn.inactive:hover { background: rgba(255,255,255,.1); }
 
   .progress-strip {
-    max-width: 1160px; margin: 22px auto 0; padding: 0 28px 0;
+    max-width: 1160px; margin: 18px auto 0; padding: 0 28px 0;
     display: flex; align-items: center; gap: 0; overflow: hidden; border-radius: 6px 6px 0 0;
   }
   .ps-seg { flex: 1; height: 5px; }
 
-  /* ── Wrap ── */
+  /* ── VIEWS ── */
+  .view { transition: opacity .2s; }
+  .view.hidden { display: none; }
+
+  /* ── WRAP ── */
   .wrap { max-width: 1160px; margin: 0 auto; padding: 0 28px 56px; }
 
   /* ── KPIs ── */
-  .kpis { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: -2px; }
+  .kpis { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 18px; }
   .kpi {
     background: var(--card); border-radius: 12px; padding: 18px 16px 15px;
     border: 1px solid var(--line); box-shadow: 0 3px 14px rgba(15,37,64,.07);
@@ -99,7 +1088,6 @@
   .card .desc { font-size: 12px; color: var(--slate); margin-bottom: 16px; }
 
   .grid-2 { display: grid; grid-template-columns: 1.5fr 1fr; gap: 16px; }
-  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 
   /* ── Funnel bars ── */
   .stage { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
@@ -112,12 +1100,12 @@
   .s-track { flex: 1; background: #edf0f5; border-radius: 6px; height: 22px; overflow: hidden; }
   .s-fill  { height: 100%; border-radius: 6px; display: flex; align-items: center;
     padding-left: 10px; color: #fff; font-size: 11px; font-weight: 700; }
-  .s-pct { font-size: 11px; color: var(--slate); width: 36px; text-align: right; flex-shrink: 0; }
+  .s-pct { font-size: 11px; color: var(--slate); width: 40px; text-align: right; flex-shrink: 0; }
   .s-count { width: 28px; text-align: right; font-size: 13px; font-weight: 700;
     color: var(--navy); flex-shrink: 0; }
   .s-count.zero { color: #c8d0db; }
 
-  /* ── Conversion mini ── */
+  /* ── Conversion ── */
   .conv { display: flex; align-items: stretch; gap: 0; }
   .conv-step {
     flex: 1; text-align: center; padding: 14px 10px;
@@ -129,7 +1117,6 @@
     color: var(--slate); font-weight: 600; margin-top: 3px; }
   .conv-rate { font-size: 12px; font-weight: 700; color: var(--green); margin-top: 6px; }
   .conv-rate.na { color: var(--slate); }
-  .arrow { color: var(--line); font-size: 18px; display: flex; align-items: center; padding: 0 2px; }
 
   /* ── Donut ── */
   .donut-row { display: flex; align-items: center; gap: 22px; }
@@ -141,18 +1128,14 @@
   .donut-center .dn { font-size: 26px; font-weight: 800; color: var(--navy); }
   .donut-center .dt { font-size: 10px; color: var(--slate); text-transform: uppercase; }
   .legend { flex: 1; }
-  .leg-item { display: flex; align-items: center; gap: 9px; font-size: 13px;
-    margin-bottom: 10px; }
+  .leg-item { display: flex; align-items: center; gap: 9px; font-size: 13px; margin-bottom: 10px; }
   .leg-dot { width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; }
   .leg-n { margin-left: auto; font-weight: 700; color: var(--navy); font-size: 14px; }
   .leg-pct { font-size: 11px; color: var(--slate); margin-left: 4px; }
 
-  /* ── Milestone row ── */
+  /* ── Milestones ── */
   .milestones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px; }
-  .ms {
-    border-radius: 10px; padding: 14px 16px;
-    border: 1px solid var(--line);
-  }
+  .ms { border-radius: 10px; padding: 14px 16px; border: 1px solid var(--line); }
   .ms.active  { background: rgba(29,184,126,.06); border-color: rgba(29,184,126,.3); }
   .ms.pending { background: rgba(232,160,32,.05);  border-color: rgba(232,160,32,.3); }
   .ms.done    { background: rgba(29,184,126,.06); border-color: rgba(29,184,126,.3); }
@@ -173,17 +1156,101 @@
   .insights li.next::before { content: "🎯"; }
   .insights b { color: var(--navy); }
 
+  /* ── TABLE VIEW ── */
+  .tbl-wrap { max-width: 1160px; margin: 0 auto; padding: 0 28px 56px; }
+  .tbl-controls {
+    position: sticky; top: 0; z-index: 20;
+    background: var(--bg); padding: 14px 0 12px;
+    border-bottom: 1px solid var(--line);
+    display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  }
+  .tbl-search {
+    flex: 1; min-width: 220px; max-width: 340px;
+    padding: 8px 12px; border-radius: 8px;
+    border: 1.5px solid var(--line); font-size: 13px;
+    background: var(--card); color: var(--ink); outline: none;
+  }
+  .tbl-search:focus { border-color: var(--green); }
+  .filter-chips { display: flex; gap: 6px; flex-wrap: wrap; }
+  .chip {
+    cursor: pointer; padding: 5px 12px; border-radius: 20px; font-size: 11.5px;
+    font-weight: 600; border: 1.5px solid var(--line); background: var(--card);
+    color: var(--slate); transition: all .12s;
+    white-space: nowrap;
+  }
+  .chip.on { border-color: var(--navy); background: var(--navy); color: #fff; }
+  .chip:hover:not(.on) { border-color: var(--navy2); color: var(--navy2); }
+  .tbl-counter { font-size: 12px; color: var(--slate); margin-left: auto; white-space: nowrap; }
+  .tbl-sort-wrap { display: flex; align-items: center; gap: 6px; }
+  .tbl-sort-wrap label { font-size: 12px; color: var(--slate); }
+  .tbl-sort {
+    padding: 6px 10px; border-radius: 8px; border: 1.5px solid var(--line);
+    font-size: 12px; background: var(--card); color: var(--ink); cursor: pointer; outline: none;
+  }
+
+  .tbl-container { margin-top: 12px; border-radius: 12px; overflow: hidden;
+    border: 1px solid var(--line); box-shadow: 0 2px 10px rgba(15,37,64,.05); }
+  table { width: 100%; border-collapse: collapse; background: var(--card); }
+  thead { position: sticky; top: 64px; z-index: 10; }
+  thead th {
+    background: var(--navy); color: rgba(255,255,255,.85);
+    font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .6px;
+    padding: 11px 14px; text-align: left; cursor: pointer; user-select: none;
+    white-space: nowrap;
+  }
+  thead th:hover { background: var(--navy2); }
+  thead th .sort-arrow { margin-left: 4px; opacity: .5; }
+  thead th.sorted .sort-arrow { opacity: 1; color: var(--green); }
+  tbody tr { border-bottom: 1px solid var(--line); transition: background .1s; }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:nth-child(even) { background: #f7f9fc; }
+  tbody tr:hover { background: rgba(29,184,126,.04); border-left: 3px solid var(--green); }
+  tbody td { padding: 10px 14px; font-size: 13px; vertical-align: middle; }
+  td.td-num { color: var(--slate); font-size: 11px; width: 42px; text-align: right; padding-right: 8px; }
+  td.td-company { font-weight: 600; color: var(--navy); }
+  td.td-status { }
+  td.td-active { }
+  td.td-notes { color: var(--slate); font-size: 12px; max-width: 220px; }
+  td.td-notes .notes-text { white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    max-width: 200px; display: block; cursor: default; }
+
+  /* Badges */
+  .badge {
+    display: inline-block; padding: 3px 10px; border-radius: 12px;
+    font-size: 11px; font-weight: 700; white-space: nowrap;
+  }
+  .badge-ativo { background: #2E7D32; color: #fff; }
+  .badge-updates { background: #1565C0; color: #fff; }
+  .badge-onhold { background: #F57F17; color: #fff; }
+  .badge-dec-inv { background: #455A64; color: #fff; }
+  .badge-dec-nord { background: #C62828; color: #fff; }
+
+  /* Status pills */
+  .pill {
+    display: inline-block; padding: 3px 9px; border-radius: 10px;
+    font-size: 11px; font-weight: 600; white-space: nowrap;
+  }
+  .pill-0 { background:#f0f2f5; color:#8496ae; }
+  .pill-1 { background:#e8eef6; color:#1a3a5c; }
+  .pill-2 { background:#e3ecf9; color:#1a3a5c; }
+  .pill-3 { background:#fff3e0; color:#e65100; }
+  .pill-4 { background:#e8f5e9; color:#2E7D32; }
+  .pill-5 { background:#e8f5e9; color:#2E7D32; }
+  .pill-6 { background:#e8f5e9; color:#2E7D32; }
+  .pill-7 { background:#c8f0de; color:#155724; font-weight:700; }
+
+  .tbl-footer { padding: 14px 0; font-size: 11.5px; color: var(--slate); text-align: center; }
+
   footer { margin-top: 28px; padding-top: 16px; border-top: 1px solid var(--line);
     font-size: 11.5px; color: var(--slate); display: flex;
     justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
   .footer-logo { font-weight: 700; color: var(--navy); letter-spacing: .5px; }
 
   @media (max-width: 900px) {
-    .kpis        { grid-template-columns: repeat(2, 1fr); }
-    .grid-2      { grid-template-columns: 1fr; }
-    .grid-3      { grid-template-columns: 1fr 1fr; }
-    .milestones  { grid-template-columns: 1fr 1fr; }
-    .hdr-meta    { text-align: left; }
+    .kpis { grid-template-columns: repeat(2, 1fr); }
+    .grid-2 { grid-template-columns: 1fr; }
+    .milestones { grid-template-columns: 1fr 1fr; }
+    .hdr-right { flex-wrap: wrap; gap: 6px; }
   }
 </style>
 </head>
@@ -192,18 +1259,17 @@
 <!-- Header -->
 <header>
   <div class="hdr-inner">
-    <div>
-      <div class="hdr-badge">Roadshow em andamento</div>
-      <div class="hdr-title">PROSPERA</div>
-      <div class="hdr-sub">Acompanhamento do Processo de Captação — Norder Capital</div>
+    <div class="hdr-left">
+      <div>
+        <div class="hdr-brand">PROSPERA</div>
+        <div class="hdr-tagline">Roadshow de Investidores — Norder Capital</div>
+      </div>
     </div>
-    <div class="hdr-meta">
-      <div><span class="dot"></span><strong>Dados ao vivo</strong> do Attio</div>
-      <div style="margin-top:4px">Atualizado em 22/05/2026</div>
-      <div style="margin-top:2px">134 investidores mapeados</div>
+    <div class="hdr-right">
+      <button class="view-btn active" id="btn-dashboard" onclick="showView('dashboard')">📊 Dashboard</button>
+      <button class="view-btn inactive" id="btn-table" onclick="showView('table')">📋 Lista</button>
     </div>
   </div>
-  <!-- Stage progress strip -->
   <div class="progress-strip">
     <div class="ps-seg" style="background:#253e5c"></div>
     <div class="ps-seg" style="background:#2e5070"></div>
@@ -215,181 +1281,123 @@
   </div>
 </header>
 
+<!-- VIEW 1: Dashboard -->
+<div id="view-dashboard" class="view">
 <div class="wrap">
 
   <!-- KPIs -->
-  <div class="kpis">
-    <div class="kpi c-green">
-      <div class="lbl">Universo mapeado</div>
-      <div class="val">134</div>
-      <div class="sub">investidores identificados</div>
-    </div>
-    <div class="kpi c-navy">
-      <div class="lbl">Pipeline ativo</div>
-      <div class="val">44</div>
-      <div class="sub">em processo (32,8%)</div>
-    </div>
-    <div class="kpi c-green">
-      <div class="lbl">Análise avançada</div>
-      <div class="val">5</div>
-      <div class="sub">investidores em due diligence</div>
-    </div>
-    <div class="kpi c-amber">
-      <div class="lbl">Reuniões realizadas</div>
-      <div class="val">10</div>
-      <div class="sub">7,6% taxa de conversão</div>
-    </div>
-    <div class="kpi c-slate">
-      <div class="lbl">On hold</div>
-      <div class="val">16</div>
-      <div class="sub">aguardando retomada</div>
-    </div>
-  </div>
+  <div class="kpis" id="kpi-row"></div>
 
-  <!-- Funil + Status -->
+  <!-- Funil + Donut + Conversão -->
   <div class="sec">
     <div class="sec-title">Pipeline por estágio</div>
     <div class="grid-2">
 
       <div class="card">
         <h3>Funil do roadshow</h3>
-        <div class="desc">Distribuição dos 134 investidores por etapa do processo.</div>
-
-        <!-- Active stages -->
+        <div class="desc" id="funnel-desc"></div>
+        
         <div class="stage">
           <div class="s-num dim">0</div>
           <div class="s-name dim">Não Contactado</div>
-          <div class="s-track"><div class="s-fill" style="width:2.2%;background:#c8d0db"></div></div>
-          <div class="s-pct">2,2%</div><div class="s-count">3</div>
+          <div class="s-track"><div class="s-fill" style="width:10.3%;background:#c8d0db"></div></div>
+          <div class="s-pct">5.0%</div>
+          <div class="s-count">7</div>
         </div>
         <div class="stage">
           <div class="s-num">1</div>
           <div class="s-name">Abordagem Realizada</div>
-          <div class="s-track"><div class="s-fill" style="width:100%;background:var(--navy2)">30 investidores</div></div>
-          <div class="s-pct">22,4%</div><div class="s-count">30</div>
+          <div class="s-track"><div class="s-fill" style="width:100.0%;background:#1a3a5c">68</div></div>
+          <div class="s-pct">48.9%</div>
+          <div class="s-count">68</div>
         </div>
         <div class="stage">
           <div class="s-num">2</div>
           <div class="s-name">Análise Inicial</div>
-          <div class="s-track"><div class="s-fill" style="width:6.6%;background:var(--navy2)"></div></div>
-          <div class="s-pct">1,5%</div><div class="s-count">2</div>
+          <div class="s-track"><div class="s-fill" style="width:42.6%;background:#1a3a5c">29</div></div>
+          <div class="s-pct">20.9%</div>
+          <div class="s-count">29</div>
         </div>
         <div class="stage">
           <div class="s-num dim">3</div>
           <div class="s-name dim">Agendamento Norder</div>
-          <div class="s-track"><div class="s-fill" style="width:1%;background:#c8d0db"></div></div>
-          <div class="s-pct">—</div><div class="s-count zero">0</div>
+          <div class="s-track"><div class="s-fill" style="width:1.5%;background:#c8d0db"></div></div>
+          <div class="s-pct">0.7%</div>
+          <div class="s-count">1</div>
         </div>
         <div class="stage">
           <div class="s-num">4</div>
           <div class="s-name">Reunião c/ Norder</div>
-          <div class="s-track"><div class="s-fill" style="width:10%;background:var(--green)"></div></div>
-          <div class="s-pct">2,2%</div><div class="s-count">3</div>
+          <div class="s-track"><div class="s-fill" style="width:7.4%;background:#1db87e"></div></div>
+          <div class="s-pct">3.6%</div>
+          <div class="s-count">5</div>
         </div>
         <div class="stage">
           <div class="s-num">5</div>
           <div class="s-name">Agendamento c/ Prospera</div>
-          <div class="s-track"><div class="s-fill" style="width:3.3%;background:var(--green)">1</div></div>
-          <div class="s-pct">0,7%</div><div class="s-count">1</div>
+          <div class="s-track"><div class="s-fill" style="width:1.5%;background:#1db87e"></div></div>
+          <div class="s-pct">0.7%</div>
+          <div class="s-count">1</div>
         </div>
         <div class="stage">
-          <div class="s-num dim">6</div>
-          <div class="s-name dim">Reunião c/ Prospera</div>
-          <div class="s-track"><div class="s-fill" style="width:1%;background:#c8d0db"></div></div>
-          <div class="s-pct">—</div><div class="s-count zero">0</div>
+          <div class="s-num">6</div>
+          <div class="s-name">Reunião c/ Prospera</div>
+          <div class="s-track"><div class="s-fill" style="width:29.4%;background:#1db87e">20</div></div>
+          <div class="s-pct">14.4%</div>
+          <div class="s-count">20</div>
         </div>
         <div class="stage">
-          <div class="s-num" style="background:var(--green)">7</div>
+          <div class="s-num"style="background:var(--green)">7</div>
           <div class="s-name" style="color:var(--green2);font-weight:700">Análise Avançada</div>
-          <div class="s-track"><div class="s-fill" style="width:16.6%;background:var(--green)">5</div></div>
-          <div class="s-pct">3,7%</div><div class="s-count" style="color:var(--green2)">5</div>
+          <div class="s-track"><div class="s-fill" style="width:11.8%;background:#1db87e"></div></div>
+          <div class="s-pct">5.8%</div>
+          <div class="s-count"style="color:var(--green2);font-weight:700">8</div>
         </div>
-
         <div style="margin: 14px 0 10px; border-top:1px dashed var(--line); padding-top:12px;">
           <div class="stage">
             <div class="s-num" style="background:#8496ae">—</div>
             <div class="s-name dim">On Hold</div>
-            <div class="s-track"><div class="s-fill" style="width:53.3%;background:#8496ae">16 investidores</div></div>
-            <div class="s-pct">11,9%</div><div class="s-count" style="color:#8496ae">16</div>
+            <div class="s-track"><div class="s-fill" style="width:19.1%;background:#8496ae">13</div></div>
+            <div class="s-pct">9.4%</div>
+            <div class="s-count" style="color:#8496ae">13</div>
           </div>
           <div class="stage">
             <div class="s-num" style="background:#d94f4f">✕</div>
             <div class="s-name dim">Declinados (investidor)</div>
-            <div class="s-track"><div class="s-fill" style="width:100%;background:#d94f4f">73 investidores declinaram</div></div>
-            <div class="s-pct">54,5%</div><div class="s-count" style="color:#d94f4f">73</div>
+            <div class="s-track"><div class="s-fill" style="width:116.2%;background:#d94f4f">79</div></div>
+            <div class="s-pct">56.8%</div>
+            <div class="s-count" style="color:#d94f4f">79</div>
           </div>
           <div class="stage">
             <div class="s-num" style="background:#e0998c">✕</div>
             <div class="s-name dim">Declinados (Norder)</div>
-            <div class="s-track"><div class="s-fill" style="width:3.3%;background:#e0998c"></div></div>
-            <div class="s-pct">0,7%</div><div class="s-count" style="color:#d94f4f">1</div>
+            <div class="s-track"><div class="s-fill" style="width:2.9%;background:#e0998c"></div></div>
+            <div class="s-pct">1.4%</div>
+            <div class="s-count" style="color:#d94f4f">2</div>
           </div>
         </div>
       </div>
 
-      <!-- Status donut + conversion -->
       <div style="display:flex;flex-direction:column;gap:16px">
-
         <div class="card">
           <h3>Visão geral do universo</h3>
-          <div class="desc">Distribuição de todos os 134 investidores.</div>
+          <div class="desc" id="donut-desc"></div>
           <div class="donut-row">
-            <div class="donut" style="background: conic-gradient(
-                var(--green)  0 32.8%,
-                #d94f4f 32.8% 88.1%,
-                #8496ae 88.1% 100%);">
+            <div class="donut" id="donut-chart">
               <div class="donut-center">
-                <div class="dn">134</div>
+                <div class="dn" id="donut-n"></div>
                 <div class="dt">total</div>
               </div>
             </div>
-            <div class="legend">
-              <div class="leg-item">
-                <span class="leg-dot" style="background:var(--green)"></span>
-                Pipeline ativo
-                <span class="leg-n">44</span><span class="leg-pct">32,8%</span>
-              </div>
-              <div class="leg-item">
-                <span class="leg-dot" style="background:#d94f4f"></span>
-                Declinados
-                <span class="leg-n">74</span><span class="leg-pct">55,2%</span>
-              </div>
-              <div class="leg-item">
-                <span class="leg-dot" style="background:#8496ae"></span>
-                On Hold
-                <span class="leg-n">16</span><span class="leg-pct">11,9%</span>
-              </div>
-            </div>
+            <div class="legend" id="donut-legend"></div>
           </div>
         </div>
 
         <div class="card">
           <h3>Conversão do funil</h3>
           <div class="desc">Taxa de avanço pelos estágios-chave.</div>
-          <div class="conv">
-            <div class="conv-step">
-              <div class="conv-n">134</div>
-              <div class="conv-lbl">Universo</div>
-              <div class="conv-rate na">—</div>
-            </div>
-            <div class="conv-step">
-              <div class="conv-n">44</div>
-              <div class="conv-lbl">Em processo</div>
-              <div class="conv-rate">32,8%</div>
-            </div>
-            <div class="conv-step">
-              <div class="conv-n">10</div>
-              <div class="conv-lbl">Com reunião</div>
-              <div class="conv-rate">22,7%</div>
-            </div>
-            <div class="conv-step">
-              <div class="conv-n">5</div>
-              <div class="conv-lbl">Análise Av.</div>
-              <div class="conv-rate">50,0%</div>
-            </div>
-          </div>
+          <div class="conv" id="conv-row"></div>
         </div>
-
       </div>
     </div>
   </div>
@@ -397,65 +1405,323 @@
   <!-- Milestones -->
   <div class="sec">
     <div class="sec-title">Marcos do processo</div>
-    <div class="milestones">
-      <div class="ms done">
-        <div class="ms-icon">📨</div>
-        <div class="ms-label">Abordagens enviadas</div>
-        <div class="ms-val">131</div>
-        <div class="ms-note">97,8% do universo contactado</div>
-      </div>
-      <div class="ms done">
-        <div class="ms-icon">🤝</div>
-        <div class="ms-label">Reuniões com Norder</div>
-        <div class="ms-val">10</div>
-        <div class="ms-note">investidores apresentados ao deal</div>
-      </div>
-      <div class="ms done">
-        <div class="ms-icon">❓</div>
-        <div class="ms-label">Q&A realizados</div>
-        <div class="ms-val">4</div>
-        <div class="ms-note">perguntas formais respondidas</div>
-      </div>
-      <div class="ms active">
-        <div class="ms-icon">🔬</div>
-        <div class="ms-label">Em análise avançada</div>
-        <div class="ms-val">5</div>
-        <div class="ms-note">due diligence em andamento</div>
-      </div>
-      <div class="ms pending">
-        <div class="ms-icon">📅</div>
-        <div class="ms-label">Agendado c/ Prospera</div>
-        <div class="ms-val">1</div>
-        <div class="ms-note">1ª reunião com o cliente marcada</div>
-      </div>
-      <div class="ms pending">
-        <div class="ms-icon">🏁</div>
-        <div class="ms-label">Aprovados</div>
-        <div class="ms-val">0</div>
-        <div class="ms-note">processo em curso</div>
-      </div>
-    </div>
+    <div class="milestones" id="milestones-row"></div>
   </div>
 
   <!-- Insights -->
   <div class="sec">
     <div class="sec-title">Análise e próximos passos</div>
     <div class="card">
-      <ul class="insights">
-        <li class="ok"><b>5 investidores em análise avançada</b> — estágio mais crítico e promissor do processo. Esses fundos avançaram além das reuniões iniciais e estão conduzindo due diligence ativo.</li>
-        <li class="ok"><b>1 investidor já agendou reunião direta com a Prospera</b> (estágio 5) — marco relevante do roadshow, indicando interesse concreto em conhecer a empresa.</li>
-        <li class="info"><b>54,5% do universo declinaram</b> (73 de 134). Taxa esperada para um roadshow de captação. O foco agora é concentrar energia nos 5 em análise avançada e nos 16 em on hold que podem ser reativados.</li>
-        <li class="warn"><b>16 investidores em on hold</b> — oportunidade de reativação. Vale mapear os motivos de pausa e identificar quais têm potencial de retomada no curto prazo.</li>
-        <li class="next"><b>Próximo passo crítico:</b> converter os 5 de análise avançada para o estágio de reunião com a Prospera e, eventualmente, para aprovação.</li>
-      </ul>
+      <ul class="insights" id="insights-list"></ul>
     </div>
   </div>
 
   <footer>
-    <div>Fonte: Attio · board PROSPERA · atualizado em 22/05/2026</div>
+    <div>Fonte: Attio · Lista Prospera · Gerado em <span id="footer-date-dash"></span></div>
     <div class="footer-logo">NORDER CAPITAL</div>
   </footer>
-
 </div>
+</div>
+
+<!-- VIEW 2: Lista de Investidores -->
+<div id="view-table" class="view hidden">
+<div class="tbl-wrap">
+  <div class="tbl-controls">
+    <input class="tbl-search" id="tbl-search" type="text" placeholder="🔍 Buscar empresa..." oninput="renderTable()">
+    <div class="filter-chips" id="filter-chips"></div>
+    <div class="tbl-sort-wrap">
+      <label>Ordenar:</label>
+      <select class="tbl-sort" id="tbl-sort" onchange="renderTable()">
+        <option value="stage">Por estágio</option>
+        <option value="az">A–Z</option>
+        <option value="za">Z–A</option>
+      </select>
+    </div>
+    <div class="tbl-counter" id="tbl-counter"></div>
+  </div>
+
+  <div class="tbl-container">
+    <table>
+      <thead>
+        <tr>
+          <th class="td-num">#</th>
+          <th onclick="toggleSort('company')">Empresa <span class="sort-arrow" id="arr-company"></span></th>
+          <th onclick="toggleSort('status')">Pipeline Status <span class="sort-arrow" id="arr-status"></span></th>
+          <th onclick="toggleSort('active')">Situação <span class="sort-arrow" id="arr-active"></span></th>
+          <th>Observações</th>
+        </tr>
+      </thead>
+      <tbody id="tbl-body"></tbody>
+    </table>
+  </div>
+  <div class="tbl-footer">
+    Fonte: Attio · Lista Prospera · Gerado em <span id="footer-date-tbl"></span>
+  </div>
+</div>
+</div>
+
+<script>
+// ── Stats from data ──
+function computeStats() {
+  const total = INVESTORS.length;
+  const activeCount  = INVESTORS.filter(i => i.active === "ATIVO").length;
+  const onHold       = INVESTORS.filter(i => i.active === "ON HOLD").length;
+  const decInv       = INVESTORS.filter(i => i.active === "DECLINADO INVESTIDOR").length;
+  const decNord      = INVESTORS.filter(i => i.active === "DECLINADO NORDER").length;
+  const updates      = INVESTORS.filter(i => i.active === "UPDATES").length;
+  const advAnalysis  = INVESTORS.filter(i => i.status === "7. ANÁLISE AVANÇADA").length;
+  const withMeeting  = INVESTORS.filter(i => i.status >= "4.").length;
+  const inProcess    = INVESTORS.filter(i => i.status > "0.").length;
+  const stage5       = INVESTORS.filter(i => i.status === "5. AGENDAMENTO COM O CLIENTE").length;
+  return { total, activeCount, onHold, decInv, decNord, updates, advAnalysis, withMeeting, inProcess, stage5 };
+}
+
+// ── Render KPIs ──
+function renderKPIs(s) {
+  const pctActive = s.total ? ((s.activeCount / s.total)*100).toFixed(1) : 0;
+  const convMeeting = s.activeCount ? ((s.withMeeting / (s.activeCount + s.onHold + s.updates))*100).toFixed(1) : 0;
+  document.getElementById("kpi-row").innerHTML = `
+    <div class="kpi c-green">
+      <div class="lbl">Universo mapeado</div>
+      <div class="val">${s.total}</div>
+      <div class="sub">investidores identificados</div>
+    </div>
+    <div class="kpi c-navy">
+      <div class="lbl">Pipeline ativo</div>
+      <div class="val">${s.activeCount}</div>
+      <div class="sub">em processo (${pctActive}%)</div>
+    </div>
+    <div class="kpi c-green">
+      <div class="lbl">Análise avançada</div>
+      <div class="val">${s.advAnalysis}</div>
+      <div class="sub">investidores em due diligence</div>
+    </div>
+    <div class="kpi c-amber">
+      <div class="lbl">Reuniões realizadas</div>
+      <div class="val">${s.withMeeting}</div>
+      <div class="sub">${s.total ? ((s.withMeeting/s.total)*100).toFixed(1) : 0}% taxa de conversão</div>
+    </div>
+    <div class="kpi c-slate">
+      <div class="lbl">On Hold</div>
+      <div class="val">${s.onHold}</div>
+      <div class="sub">aguardando retomada</div>
+    </div>
+  `;
+}
+
+// ── Render Donut ──
+function renderDonut(s) {
+  const t = s.total;
+  const pA  = t ? (s.activeCount/t*100).toFixed(1) : 0;
+  const pU  = t ? (s.updates/t*100).toFixed(1) : 0;
+  const pH  = t ? (s.onHold/t*100).toFixed(1) : 0;
+  const pDI = t ? (s.decInv/t*100).toFixed(1) : 0;
+  const pDN = t ? (s.decNord/t*100).toFixed(1) : 0;
+  const c1 = +pA;
+  const c2 = c1 + +pU;
+  const c3 = c2 + +pH;
+  const c4 = c3 + +pDI;
+  document.getElementById("donut-chart").style.background =
+    `conic-gradient(#1db87e 0 ${c1}%, #1565C0 ${c1}% ${c2}%, #F57F17 ${c2}% ${c3}%, #455A64 ${c3}% ${c4}%, #C62828 ${c4}% 100%)`;
+  document.getElementById("donut-n").textContent = t;
+  document.getElementById("donut-desc").textContent = `Distribuição de todos os ${t} investidores.`;
+  document.getElementById("funnel-desc").textContent = `Distribuição dos ${t} investidores por etapa do processo.`;
+  document.getElementById("donut-legend").innerHTML = `
+    <div class="leg-item"><span class="leg-dot" style="background:#1db87e"></span>Ativo
+      <span class="leg-n">${s.activeCount}</span><span class="leg-pct">${pA}%</span></div>
+    ${s.updates ? `<div class="leg-item"><span class="leg-dot" style="background:#1565C0"></span>Updates
+      <span class="leg-n">${s.updates}</span><span class="leg-pct">${pU}%</span></div>` : ''}
+    <div class="leg-item"><span class="leg-dot" style="background:#F57F17"></span>On Hold
+      <span class="leg-n">${s.onHold}</span><span class="leg-pct">${pH}%</span></div>
+    <div class="leg-item"><span class="leg-dot" style="background:#455A64"></span>Declinado Inv.
+      <span class="leg-n">${s.decInv}</span><span class="leg-pct">${pDI}%</span></div>
+    ${s.decNord ? `<div class="leg-item"><span class="leg-dot" style="background:#C62828"></span>Declinado Norder
+      <span class="leg-n">${s.decNord}</span><span class="leg-pct">${pDN}%</span></div>` : ''}
+  `;
+}
+
+// ── Render Conversion ──
+function renderConversion(s) {
+  const t = s.total;
+  const pProc = t ? ((s.inProcess/t)*100).toFixed(1) : 0;
+  const pMeet = s.inProcess ? ((s.withMeeting/s.inProcess)*100).toFixed(1) : 0;
+  const pAdv  = s.withMeeting ? ((s.advAnalysis/s.withMeeting)*100).toFixed(1) : 0;
+  document.getElementById("conv-row").innerHTML = `
+    <div class="conv-step"><div class="conv-n">${t}</div><div class="conv-lbl">Universo</div><div class="conv-rate na">—</div></div>
+    <div class="conv-step"><div class="conv-n">${s.inProcess}</div><div class="conv-lbl">Em processo</div><div class="conv-rate">${pProc}%</div></div>
+    <div class="conv-step"><div class="conv-n">${s.withMeeting}</div><div class="conv-lbl">Com reunião</div><div class="conv-rate">${pMeet}%</div></div>
+    <div class="conv-step"><div class="conv-n">${s.advAnalysis}</div><div class="conv-lbl">Análise Av.</div><div class="conv-rate">${pAdv}%</div></div>
+  `;
+}
+
+// ── Render Milestones ──
+function renderMilestones(s) {
+  const reached = INVESTORS.filter(i => i.status > "0.").length;
+  document.getElementById("milestones-row").innerHTML = `
+    <div class="ms done"><div class="ms-icon">📨</div>
+      <div class="ms-label">Abordagens enviadas</div>
+      <div class="ms-val">${reached}</div>
+      <div class="ms-note">${s.total ? ((reached/s.total)*100).toFixed(1) : 0}% do universo contactado</div></div>
+    <div class="ms done"><div class="ms-icon">🤝</div>
+      <div class="ms-label">Reuniões com Norder</div>
+      <div class="ms-val">${s.withMeeting}</div>
+      <div class="ms-note">investidores apresentados ao deal</div></div>
+    <div class="ms ${s.advAnalysis > 0 ? 'active' : 'pending'}"><div class="ms-icon">🔬</div>
+      <div class="ms-label">Em análise avançada</div>
+      <div class="ms-val">${s.advAnalysis}</div>
+      <div class="ms-note">due diligence em andamento</div></div>
+    <div class="ms ${s.stage5 > 0 ? 'active' : 'pending'}"><div class="ms-icon">📅</div>
+      <div class="ms-label">Agendado c/ Prospera</div>
+      <div class="ms-val">${s.stage5}</div>
+      <div class="ms-note">1ª reunião com o cliente marcada</div></div>
+    <div class="ms pending"><div class="ms-icon">🏁</div>
+      <div class="ms-label">Aprovados</div>
+      <div class="ms-val">0</div>
+      <div class="ms-note">processo em curso</div></div>
+    <div class="ms pending"><div class="ms-icon">⏸️</div>
+      <div class="ms-label">On Hold</div>
+      <div class="ms-val">${s.onHold}</div>
+      <div class="ms-note">aguardando retomada</div></div>
+  `;
+}
+
+// ── Render Insights ──
+function renderInsights(s) {
+  const pDeclined = s.total ? ((s.decInv + s.decNord)/s.total*100).toFixed(1) : 0;
+  document.getElementById("insights-list").innerHTML = `
+    ${s.advAnalysis > 0 ? `<li class="ok"><b>${s.advAnalysis} investidor${s.advAnalysis>1?'es':''} em análise avançada</b> — estágio mais crítico e promissor do processo. Esses fundos avançaram além das reuniões iniciais e estão conduzindo due diligence ativo.</li>` : ''}
+    ${s.stage5 > 0 ? `<li class="ok"><b>${s.stage5} investidor${s.stage5>1?'es':''} já agendou reunião direta com a Prospera</b> (estágio 5) — marco relevante do roadshow, indicando interesse concreto.</li>` : ''}
+    <li class="info"><b>${pDeclined}% do universo declinaram</b> (${s.decInv + s.decNord} de ${s.total}). Taxa esperada para um roadshow de captação. O foco agora é concentrar energia nos ${s.advAnalysis} em análise avançada e nos ${s.onHold} em on hold que podem ser reativados.</li>
+    ${s.onHold > 0 ? `<li class="warn"><b>${s.onHold} investidores em on hold</b> — oportunidade de reativação. Vale mapear os motivos de pausa e identificar quais têm potencial de retomada no curto prazo.</li>` : ''}
+    ${s.advAnalysis > 0 ? `<li class="next"><b>Próximo passo crítico:</b> converter os ${s.advAnalysis} de análise avançada para o estágio de reunião com a Prospera e, eventualmente, para aprovação.</li>` : '<li class="next"><b>Próximo passo:</b> avançar investidores para as fases de análise e reunião com a Prospera.</li>'}
+  `;
+}
+
+// ── TABLE VIEW LOGIC ──
+let activeFilter = "all";
+let sortCol = null;
+let sortDir = 1;
+
+const BADGE = {
+  "ATIVO":                 ["badge-ativo",    "Ativo"],
+  "UPDATES":               ["badge-updates",  "Updates"],
+  "ON HOLD":               ["badge-onhold",   "On Hold"],
+  "DECLINADO INVESTIDOR":  ["badge-dec-inv",  "Decl. Inv."],
+  "DECLINADO NORDER":      ["badge-dec-nord", "Decl. Norder"],
+};
+
+const PILL_CLASS = {
+  "0": "pill-0", "1": "pill-1", "2": "pill-2", "3": "pill-3",
+  "4": "pill-4", "5": "pill-5", "6": "pill-6", "7": "pill-7",
+};
+
+function stageNum(status) {
+  const m = status.match(/^(\d)/);
+  return m ? m[1] : "0";
+}
+
+function renderTable() {
+  const q = document.getElementById("tbl-search").value.toLowerCase();
+  const sortSelect = document.getElementById("tbl-sort").value;
+
+  let data = INVESTORS.filter(inv => {
+    const matchSearch = !q || inv.company.toLowerCase().includes(q);
+    let matchFilter = true;
+    if (activeFilter === "ativo")      matchFilter = inv.active === "ATIVO";
+    else if (activeFilter === "onhold") matchFilter = inv.active === "ON HOLD";
+    else if (activeFilter === "updates") matchFilter = inv.active === "UPDATES";
+    else if (activeFilter === "dec-inv") matchFilter = inv.active === "DECLINADO INVESTIDOR";
+    else if (activeFilter === "dec-nord") matchFilter = inv.active === "DECLINADO NORDER";
+    return matchSearch && matchFilter;
+  });
+
+  // Sort
+  if (sortCol) {
+    data.sort((a, b) => {
+      let va = a[sortCol] || "", vb = b[sortCol] || "";
+      return va < vb ? -sortDir : va > vb ? sortDir : 0;
+    });
+  } else {
+    if (sortSelect === "az") data.sort((a,b) => a.company.localeCompare(b.company));
+    else if (sortSelect === "za") data.sort((a,b) => b.company.localeCompare(a.company));
+    else data.sort((a,b) => b.status.localeCompare(a.status)); // stage desc
+  }
+
+  document.getElementById("tbl-counter").textContent =
+    `Exibindo ${data.length} de ${INVESTORS.length} investidores`;
+
+  const rows = data.map((inv, idx) => {
+    const [bClass, bLabel] = BADGE[inv.active] || ["badge-dec-inv", inv.active];
+    const sn = stageNum(inv.status);
+    const pClass = PILL_CLASS[sn] || "pill-0";
+    const notes = inv.status_notes || inv.lost_reason || "";
+    const notesTrunc = notes.length > 50 ? notes.substring(0, 50) + "…" : notes;
+    return `<tr>
+      <td class="td-num">${idx+1}</td>
+      <td class="td-company">${inv.company}</td>
+      <td class="td-status"><span class="pill ${pClass}">${inv.status}</span></td>
+      <td class="td-active"><span class="badge ${bClass}">${bLabel}</span></td>
+      <td class="td-notes"><span class="notes-text" title="${notes.replace(/"/g,"&quot;")}">${notesTrunc || "—"}</span></td>
+    </tr>`;
+  }).join("");
+
+  document.getElementById("tbl-body").innerHTML = rows;
+}
+
+function setFilter(f) {
+  activeFilter = f;
+  document.querySelectorAll(".chip").forEach(c => c.classList.remove("on"));
+  document.getElementById("chip-" + f).classList.add("on");
+  renderTable();
+}
+
+function toggleSort(col) {
+  if (sortCol === col) sortDir *= -1;
+  else { sortCol = col; sortDir = 1; }
+  document.querySelectorAll(".sort-arrow").forEach(a => a.textContent = "");
+  document.getElementById("arr-" + col).textContent = sortDir === 1 ? " ↑" : " ↓";
+  document.querySelectorAll("thead th").forEach(th => th.classList.remove("sorted"));
+  event.currentTarget.classList.add("sorted");
+  renderTable();
+}
+
+function buildFilterChips() {
+  const chips = [
+    ["all", "Todos"],
+    ["ativo", "ATIVO"],
+    ["onhold", "ON HOLD"],
+    ["updates", "UPDATES"],
+    ["dec-inv", "DECLINADO INV."],
+    ["dec-nord", "DECLINADO NORDER"],
+  ];
+  document.getElementById("filter-chips").innerHTML = chips.map(([f, label]) =>
+    `<div class="chip${f === "all" ? " on" : ""}" id="chip-${f}" onclick="setFilter('${f}')">${label}</div>`
+  ).join("");
+}
+
+// ── View toggle ──
+function showView(view) {
+  document.getElementById("view-dashboard").classList.toggle("hidden", view !== "dashboard");
+  document.getElementById("view-table").classList.toggle("hidden", view !== "table");
+  document.getElementById("btn-dashboard").className = "view-btn " + (view === "dashboard" ? "active" : "inactive");
+  document.getElementById("btn-table").className = "view-btn " + (view === "table" ? "active" : "inactive");
+  if (view === "table") renderTable();
+}
+
+// ── INIT ──
+(function init() {
+  const s = computeStats();
+  renderKPIs(s);
+  renderDonut(s);
+  renderConversion(s);
+  renderMilestones(s);
+  renderInsights(s);
+  buildFilterChips();
+
+  // Set dates
+  document.getElementById("footer-date-dash").textContent = GENERATED_DATE;
+  document.getElementById("footer-date-tbl").textContent = GENERATED_DATE;
+})();
+</script>
 </body>
 </html>
