@@ -1021,7 +1021,9 @@ const INVESTORS = [
     max-width: 1160px; margin: 0 auto; padding: 0 28px;
     display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap;
   }
-  .hdr-left { display: flex; align-items: center; gap: 16px; }
+  .hdr-left { display: flex; align-items: center; gap: 18px; }
+  .norder-logo-img { height: 32px; width: auto; display: block; flex-shrink: 0; }
+  .hdr-divider { width: 1px; height: 38px; background: rgba(255,255,255,.18); flex-shrink: 0; }
   .hdr-brand { font-size: 22px; font-weight: 900; color: #fff; letter-spacing: -.3px; }
   .hdr-brand span { color: var(--green); }
   .hdr-tagline { font-size: 13px; color: #7fa8cc; }
@@ -1260,9 +1262,11 @@ const INVESTORS = [
 <header>
   <div class="hdr-inner">
     <div class="hdr-left">
+      <img src="https://images.squarespace-cdn.com/content/v1/6939b6d1e554137e2b3b3e3e/f9aea128-68f3-493b-9063-7a9ce3e963f8/Norder+Logo+Branco+Fundo+Transparente.png?format=1500w" alt="Norder Capital" class="norder-logo-img">
+      <div class="hdr-divider"></div>
       <div>
         <div class="hdr-brand">PROSPERA</div>
-        <div class="hdr-tagline">Roadshow de Investidores — Norder Capital</div>
+        <div class="hdr-tagline">Roadshow de Investidores</div>
       </div>
     </div>
     <div class="hdr-right">
