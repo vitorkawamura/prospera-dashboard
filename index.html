@@ -1473,9 +1473,9 @@ function computeStats() {
   const decInv       = INVESTORS.filter(i => i.active === "DECLINADO INVESTIDOR").length;
   const decNord      = INVESTORS.filter(i => i.active === "DECLINADO NORDER").length;
   const updates      = INVESTORS.filter(i => i.active === "UPDATES").length;
-  const advAnalysis  = INVESTORS.filter(i => i.status === "7. ANÁLISE AVANÇADA").length;
-  const withMeeting  = INVESTORS.filter(i => i.status >= "4.").length;
-  const inProcess    = INVESTORS.filter(i => i.status > "0.").length;
+  const advAnalysis  = INVESTORS.filter(i => parseInt(stageNum(i.status)) >= 7).length;
+  const withMeeting  = INVESTORS.filter(i => parseInt(stageNum(i.status)) >= 3).length;
+  const inProcess    = INVESTORS.filter(i => parseInt(stageNum(i.status)) >= 2).length;
   const stage5       = INVESTORS.filter(i => i.status === "5. AGENDAMENTO COM O CLIENTE").length;
   return { total, activeCount, onHold, decInv, decNord, updates, advAnalysis, withMeeting, inProcess, stage5 };
 }
@@ -1560,7 +1560,7 @@ function renderConversion(s) {
 
 // ── Render Milestones ──
 function renderMilestones(s) {
-  const reached = INVESTORS.filter(i => i.status > "0.").length;
+  const reached = INVESTORS.filter(i => parseInt(stageNum(i.status)) >= 2).length;
   document.getElementById("milestones-row").innerHTML = `
     <div class="ms done"><div class="ms-icon">📨</div>
       <div class="ms-label">Abordagens enviadas</div>
