@@ -1552,7 +1552,7 @@ function renderConversion(s) {
   const pAdv  = s.withMeeting ? ((s.advAnalysis/s.withMeeting)*100).toFixed(1) : 0;
   document.getElementById("conv-row").innerHTML = `
     <div class="conv-step"><div class="conv-n">${t}</div><div class="conv-lbl">Total Ativado</div><div class="conv-rate na">—</div></div>
-    <div class="conv-step"><div class="conv-n">${s.inProcess}</div><div class="conv-lbl">Reached</div><div class="conv-rate">${pProc}%</div></div>
+    <div class="conv-step"><div class="conv-n">${s.inProcess}</div><div class="conv-lbl">Reached Successfully</div><div class="conv-rate">${pProc}%</div></div>
     <div class="conv-step"><div class="conv-n">${s.withMeeting}</div><div class="conv-lbl">Com Reunião</div><div class="conv-rate">${pMeet}%</div></div>
     <div class="conv-step"><div class="conv-n">${s.advAnalysis}</div><div class="conv-lbl">Análise Avançada</div><div class="conv-rate">${pAdv}%</div></div>
   `;
